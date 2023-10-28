@@ -115,6 +115,22 @@
                                 <rect key="frame" x="16" y="357" width="130" height="188"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egB-jM-gjJ">
+                                <rect key="frame" x="331" y="394" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="heart" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24"/>
+                                </state>
+                                <state key="selected" image="heart.fill" catalog="system"/>
+                                <state key="highlighted" image="heart.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="didTapFavoriteButton:" destination="EL6-CR-Uke" eventType="touchUpInside" id="jjs-YZ-57X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TNg-S9-rQ7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,6 +138,7 @@
                     <navigationItem key="navigationItem" title="Movie Details" id="aGL-y2-dPG"/>
                     <connections>
                         <outlet property="backdropImageView" destination="YcQ-bI-ohQ" id="huV-1k-szP"/>
+                        <outlet property="favoriteButton" destination="egB-jM-gjJ" id="gZa-Ip-IpB"/>
                         <outlet property="overviewLabel" destination="7gc-aW-Xet" id="mWb-6g-gPh"/>
                         <outlet property="posterImageView" destination="Mgc-pX-q1S" id="q0E-90-3Zt"/>
                         <outlet property="releaseDateLabel" destination="etY-PF-1if" id="ww5-Xi-dnM"/>
@@ -153,8 +170,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

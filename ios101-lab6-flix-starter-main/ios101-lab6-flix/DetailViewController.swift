@@ -17,12 +17,18 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var voteLabel: UILabel!
     @IBOutlet weak var releaseDateLabel: UILabel!
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    @IBAction func didTapFavoriteButton(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
     
     var movie: Movie!
     override func viewDidLoad() {
         super.viewDidLoad()
         // MARK: - Configure the labels
-
+        favoriteButton.layer.cornerRadius = favoriteButton.frame.width / 2
+        
         titleLabel.text = movie.title
         overviewLabel.text = movie.overview
 
